@@ -1,3 +1,24 @@
+// $(document).ready(function() {
+//   function _responsiveMenu() {
+//     var screen = $(window);
+//     if (screen.width() < 900) {
+//       $('.main-header').addClass('is-responsive');
+//     }
+//     else {
+//       $('.main-header').removeClass('is-responsive');
+//     }
+//   }
+
+//   _responsiveMenu();
+
+//   $(window).resize(function() {
+//    _responsiveMenu();
+//   });
+
+// });
+
+var flagTooltip = false;
+
 $(document).scroll(function(){
   if ( $(this).scrollTop() > 100 ) {
     $('.main-header').addClass('is-scrolling');
@@ -6,28 +27,32 @@ $(document).scroll(function(){
   }
 });
 
-$("document").ready(function() {
-  $(".slider").rangeslider();
+$(document).scroll(function(){
+  if ( $(this).scrollTop() > 100  && flagTooltip == false ) {
+    $('.tooltip').addClass('is-active');
+  } else {
+    $('.tooltip').removeClass('is-active');
+  }
 });
-$.fn.rangeslider = function(options) {
-  var obj = this;
-  var defautValue = obj.attr("value");
-  obj.wrap("<span class='range-slider'></span>");
-  obj.after("<span class='slider-container'><span class='bar'><span></span></span><span class='bar-btn'><span>0</span></span></span>");
-  obj.attr("oninput", "updateSlider(this)");
-  updateSlider(this);
-  return obj;
-};
 
-function updateSlider(passObj) {
-  var obj = $(passObj);
-  var value = obj.val();
-  var min = obj.attr("min");
-  var max = obj.attr("max");
-  var range = Math.round(max - min);
-  var percentage = Math.round((value - min) * 100 / range);
-  var nextObj = obj.next();
-  nextObj.find("span.bar-btn").css("left", percentage + "%");
-  nextObj.find("span.bar > span").css("width", percentage + "%");
-  nextObj.find("span.bar-btn > span").text(percentage);
-};
+$('.tooltip .close').click(function(){
+  $('.tooltip').removeClass('is-active');
+  flagTooltip = true;
+});
+
+$(function() {
+  var handle = $( "#custom-handle" );
+  $( "#slider" ).slider({
+    range: "min",
+    value: 650,
+    min: 0,
+    step: 50,
+    max: 1000,
+    create: function() {
+      handle.text( $( this ).slider( "value" ) );
+    },
+    slide: function( event, ui ) {
+      handle.text( ui.value );
+    }
+  });
+});

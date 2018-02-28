@@ -27,6 +27,10 @@ a {
   display: inline-block;
 }
 
+img {
+  max-width: 100%;
+}
+
 .text-center {
   text-align: center;
   font-weight: 500;
@@ -81,7 +85,8 @@ a {
   z-index: 2;
   transition: all 0.2s ease;
 
-  &.is-scrolling {
+  &.is-scrolling,
+  &.is-responsive {
     background: #fff;
     box-shadow: 0 2px 4px rgba(#000,0.1);
     padding: 1rem 0;
@@ -126,7 +131,8 @@ a {
   }
 }
 
-.main-header.is-scrolling {
+.main-header.is-scrolling,
+.main-header.is-responsive {
   .main-header__brand-dark {
     display: inline-block;
   }
@@ -529,97 +535,166 @@ a {
   }
 }
 
-.range-slider {
-  display: inline-block;
-  width: 100%;
-  box-sizing: border-box;
-  position: relative;
-
-  & > input {
-    opacity: 0;
-    width: 100%;
-    position: relative;
-    z-index: 5;
-    appearance: none;
-    bottom: 0;
-    top: 0;
-    top: 10px;
-  }
-
-  & > input::-webkit-slider-thumb {
-    opacity: 0;
-  }
-
-  & > span.slider-container {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 3;
-  }
-
-  & span.slider-container > span.bar {
-    background-color: #F4F6F2;
-    display: inline-block;
-    position: absolute;
-    z-index: 1;
-    top: 12px;
-    left: 0;
-    right: 0;
-    height: 20px;
-    overflow: hidden;
-    border-radius: 100em;
-  }
-
-  & > span.slider-container > span.bar > span {
-    background: $color-action;
-    display: inline-block;
-    float: left;
-    height: 20px;
-    width: 0%;
-  }
+.ui-corner-all.ui-corner-all {
+  height: 20px;
+  border-radius: 100em;
+  background: #F4F6F2;
+  border: 0;
 }
 
-.range-slider > span.slider-container > span.bar-btn {
-  display: inline-block;
-  position: absolute;
-  width: 106px;
-  height: 39px;
-  padding: 8px 0;
-  font-weight: bold;
+#custom-handle {
+  width: 6em;
+  height: 2.4em;
+  top: 50%;
   text-align: center;
+  line-height: 36px;
   background: #fff;
-  top: 40px;
-  border-radius: 3px;
-  border: 1px solid #ccc;
+  border-radius: 100em;
+  font-weight: 40;
+  outline: 0;
   color: $color-action;
-  transform: translateX(-60px);
-  z-index: 2;
-  font-size: 1.8em;
+  transform: translate(-50%, -50%);
+  border: 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 
   &:hover {
     cursor: pointer;
   }
+
+  &:before {
+    content: 'S/ ';
+  }
 }
 
-.range-slider > span.slider-container > span.bar-btn:after {
-  content: "";
-  background-color: #fff;
-  border-radius: 100em;
-  width: 40px;
-  height: 26px;
-  display: inline-block;
+.ui-widget-header.ui-widget-header {
+  background: #00E69C;
+}
+
+.tooltip {
+  background: $color-action;
+  padding: 1rem;
+  border-radius: 4px;
   position: absolute;
-  left: 50%;
-  top: -32px;
-  z-index: 3;
-  transform: translateX(-50%);
-  border: 1px solid #ccc;
+  bottom: 0;
+  transform: translateY(130%);
+  right: 5%;
+  color: #fff;
+  display: none;
+
+  &.is-active {
+    display: inline-block;
+  }
+
+  &:before {
+    content: '';
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid $color-action;
+    border-top: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    transform: translateY(-99%);
+    right: 5%;
+  }
+
+  .close {
+    margin-left: 0.5rem;
+    svg {
+      color: #fff;
+    }
+  }
 }
 
 
-.range-slider > span.slider-container > span.bar-btn > span:before {
-  content: "S/";
-  padding-right: 0.5em;
+@media screen and (max-width: 900px) {
+
+  .main-header {
+    padding: 1rem 0;
+  }
+
+  .intro__title {
+    font-size: 26px;
+  }
+
+  .intro__title strong:before {
+    display: none;
+  }
+
+  .intro {
+    height: auto;
+    flex-direction: column;
+    padding: 90px 0;
+  }
+
+  .intro__trust {
+    position: relative;
+  }
+
+  .quote-box {
+    width: 90%;
+  }
+
+  .actions,
+  .banks__container {
+    flex-direction: column;
+  }
+
+  .actions__link {
+    width: 100%;
+  }
+
+  .contact-bar {
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+  }
+
+  .contact-bar p {
+    display: none;
+  }
+
+  .how__items {
+    text-align: center;
+  }
+
+  .banks__item {
+    margin: 1em 0;
+    width: 100%;
+  }
+
+  .quote-box__main {
+    flex-direction: column;
+
+    & > div {
+      margin-bottom: 1em;
+    }
+
+  }
+
+  .button.super {
+    padding: 1em 0;
+  }
+
+  .quote-box__payments {
+    width: 100%;
+  }
+
+  .quote-box__payment-data {
+    display: block;
+  }
+
+  .quote-box__payment {
+    margin: 10px 0;
+  }
+
+  .quote-box__payment div + div {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-header__brand-tagline {
+    display: none;
+  }
 }

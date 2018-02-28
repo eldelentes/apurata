@@ -3,14 +3,18 @@ title: Welcome to Middleman
 ---
 <section class="intro">
   <div>
-    <h2 class="intro__title">Te prestamos hasta <strong>1,000 Soles</strong>. Pre-aprobación inmediata. Recibe tu dinero en hasta <strong>29 minutos</strong>.</h2>
-
-    <div class="quote-box">
+    <div class="container">
+      <h2 class="intro__title animated fadeIn">Te prestamos hasta <strong>1,000 Soles</strong>. Pre-aprobación inmediata. Recibe tu dinero en hasta <strong>29 minutos</strong>.</h2>
+    </div>
+    <div class="quote-box animated fadeIn">
 
       <div class="quote-box__main row">
         <div class="col-md-6">
           <h4 class="quote-box__label">Escoge el monto (S/100 hasta S/1,000): </h4>
-          <input class="slider" value="20" min="0" max="100" name="rangeslider" type="range" />
+          <br>
+          <div id="slider">
+            <div id="custom-handle" class="ui-slider-handle"></div>
+          </div>
         </div>
         <div class="col-md-2">
           <h4 class="quote-box__label">Escoge número de cuotas:</h4>
@@ -57,21 +61,21 @@ title: Welcome to Middleman
 
 <section class="steps section">
   <div class="container">
-    <h4 class="section__subtitle">Fácil y rápido</h4>
-    <h3 class="section__title">¿Qué necesitas para solicitar un préstamo Apurata?</h3>
+    <h4 class="section__subtitle animated fadeInDown wow">Fácil y rápido</h4>
+    <h3 class="section__title animated fadeIn wow" data-wow-delay="0.5s">¿Qué necesitas para solicitar un préstamo Apurata?</h3>
 
     <div class="steps__container row">
-      <div class="steps__item col-md-4 col-xs-12">
+      <div class="steps__item col-md-4 col-xs-12 wow animated fadeIn" data-wow-delay="0.2s">
         <%= image_tag "how-1.png", class: "steps__item-img" %>
         <h5 class="steps__item-title">1. Completar el formulario en linea</h5>
         <p class="steps__item-info">Da click aquí y completa el breve cuestionario con tus datos básicos.</p>
       </div>
-      <div class="steps__item col-md-4 col-xs-12">
+      <div class="steps__item col-md-4 col-xs-12 wow animated fadeIn" data-wow-delay="0.6s">
         <%= image_tag "how-2.png", class: "steps__item-img" %>
         <h5 class="steps__item-title">2. Tener tu DNI a la mano</h5>
         <p class="steps__item-info">Necesitamos información de tu DNI vigente para validar tu perfil</p>
       </div>
-      <div class="steps__item col-md-4 col-xs-12">
+      <div class="steps__item col-md-4 col-xs-12 wow animated fadeIn" data-wow-delay="1s">
         <%= image_tag "how-3.png", class: "steps__item-img" %>
         <h5 class="steps__item-title">3. Cuenta de banco a tu nombre</h5>
         <p class="steps__item-info">Usamos esta información para depositar tu crédito rápido Apurata.</p>
@@ -87,14 +91,14 @@ title: Welcome to Middleman
 
 <section class="why section">
   <div class="container">
-    <h3 class="section__title">¿Porqué utilizar Apurata?</h3>
+    <h3 class="section__title wow animated fadeInDown">¿Porqué utilizar Apurata?</h3>
     <ul class="why__list row">
-      <li class="why__item col-md-4 col-xs-12"><i class="fas fa-check-square"></i>Credito Rápido y Seguro</li>
-      <li class="why__item col-md-4 col-xs-12"><i class="fas fa-check-square"></i>Pre-Aprobacion Instantanea de tu Prestamo</li>
-      <li class="why__item col-md-4 col-xs-12"><i class="fas fa-check-square"></i>Recibes tu dinero en hasta 29 minutos</li>
-      <li class="why__item col-md-4 col-xs-12"><i class="fas fa-check-square"></i>No pagas nada hasta tu fecha de pago</li>
-      <li class="why__item col-md-4 col-xs-12"><i class="fas fa-check-square"></i>Sin dinero adelantado ni pagos antes de recibir tu préstamo</li>
-      <li class="why__item col-md-4 col-xs-12"><i class="fas fa-check-square"></i>Desde la comodidad de tu casa</li>
+      <li class="why__item col-md-4 col-xs-12 wow fadeIn animated" data-wow-delay="0.2s"><i class="fas fa-check-square"></i>Credito Rápido y Seguro</li>
+      <li class="why__item col-md-4 col-xs-12 wow fadeIn animated" data-wow-delay="0.4s"><i class="fas fa-check-square"></i>Pre-Aprobacion Instantanea de tu Prestamo</li>
+      <li class="why__item col-md-4 col-xs-12 wow fadeIn animated" data-wow-delay="0.6s"><i class="fas fa-check-square"></i>Recibes tu dinero en hasta 29 minutos</li>
+      <li class="why__item col-md-4 col-xs-12 wow fadeIn animated" data-wow-delay="0.8s"><i class="fas fa-check-square"></i>No pagas nada hasta tu fecha de pago</li>
+      <li class="why__item col-md-4 col-xs-12 wow fadeIn animated" data-wow-delay="1s"><i class="fas fa-check-square"></i>Sin dinero adelantado ni pagos antes de recibir tu préstamo</li>
+      <li class="why__item col-md-4 col-xs-12 wow fadeIn animated" data-wow-delay="1.2s"><i class="fas fa-check-square"></i>Desde la comodidad de tu casa</li>
     </ul>
   </div>
 </section>
@@ -106,8 +110,8 @@ title: Welcome to Middleman
 </section>
 
 <section class="section testimonials">
-  <h4 class="section__subtitle">Testimoniales</h4>
-    <h3 class="section__title">¿Quienes recomiendan nuestros prestamos?</h3>
+  <h4 class="section__subtitle wow fadeIn animated">Testimoniales</h4>
+  <h3 class="section__title wow fadeIn animated" data-wow-delay="0.5s">¿Quienes recomiendan nuestros prestamos?</h3>
 </section>
 
 <section class="contact-bar">
@@ -120,17 +124,17 @@ title: Welcome to Middleman
 
 <section class="how section">
   <div class="container">
-    <h4 class="section__subtitle">ASÍ FUNCIONA</h4>
-    <h3 class="section__title">¿Cómo funcionan los préstamos inmediatos con Apurata?</h3>
+    <h4 class="section__subtitle wow fadeIn animated">ASÍ FUNCIONA</h4>
+    <h3 class="section__title wow fadeIn animated" data-wow-delay="0.2s">¿Cómo funcionan los préstamos inmediatos con Apurata?</h3>
     <div class="how__items">
       <div class="row">
-        <div class="how__item col-md-6 col-xs-12">
+        <div class="how__item col-md-6 col-xs-12 wow fadeIn animated" data-wow-delay="0.2s">
           <%= image_tag "faq-1.svg", class: "how__item-img" %>
           <span class="how__item-subtitle">Primer Paso</span>
           <h3 class="how__item-title">Cuánto dinero necesitas.</h3>
           <p class="how__item-text">Con los préstamos sin aval de Apurata puede realizar todos los trámites desde tu dispositivo movil o computadora sin tener que ir a una agencia o perder tiempo en colas. Usando la barra dinámica selecciona exactamente cuánto dinero necesitas y por cuánto tiempo. Ahí mismo sabrás cuánto tendrás que pagar.</p>
         </div>
-        <div class="how__item col-md-6 col-xs-12">
+        <div class="how__item col-md-6 col-xs-12 wow fadeIn animated" data-wow-delay="0.4s">
           <%= image_tag "faq-2.svg", class: "how__item-img" %>
           <span class="how__item-subtitle">Segundo Paso</span>
           <h3 class="how__item-title">Cuentanos sobre ti.</h3>
@@ -139,13 +143,13 @@ title: Welcome to Middleman
       </div>
 
       <div class="row">
-        <div class="how__item col-md-6 col-xs-12">
+        <div class="how__item col-md-6 col-xs-12 wow fadeIn animated" data-wow-delay="0.6s">
           <%= image_tag "faq-3.svg", class: "how__item-img" %>
           <span class="how__item-subtitle">Tercer Paso</span>
           <h3 class="how__item-title">Obtén préstamos personales.</h3>
           <p class="how__item-text">Respondemos a tu solicitud de préstamo inmediatamente, y en caso de ser aprobado, ¡recibes tu crédito personal en tu cuenta de banco en hasta 29 minutos!</p>
         </div>
-        <div class="how__item col-md-6 col-xs-12">
+        <div class="how__item col-md-6 col-xs-12 wow fadeIn animated" data-wow-delay="0.8s">
           <%= image_tag "faq-4.svg", class: "how__item-img" %>
           <span class="how__item-subtitle">Cuarto Paso</span>
           <h3 class="how__item-title">Paga tu crédito personal.</h3>
@@ -159,19 +163,19 @@ title: Welcome to Middleman
 
 <section class="banks section">
   <div class="container">
-    <h3 class="banks__title">Bancos donde recibes tu Préstamo en hasta <strong>29 minutos</strong></h3>
+    <h3 class="banks__title wow animated fadeInDown">Bancos donde recibes tu Préstamo en hasta <strong>29 minutos</strong></h3>
 
     <div class="banks__container">
-      <div class="banks__item">
+      <div class="banks__item fadeIn wow animated">
         <%= image_tag "bank-1.png" %>
       </div>
-      <div class="banks__item">
+      <div class="banks__item fadeIn wow animated" data-wow-delay="0.2s">
         <%= image_tag "bank-2.png" %>
       </div>
-      <div class="banks__item">
+      <div class="banks__item fadeIn wow animated" data-wow-delay="0.4s">
         <%= image_tag "bank-3.png" %>
       </div>
-      <div class="banks__item">
+      <div class="banks__item fadeIn wow animated" data-wow-delay="0.6s">
         <%= image_tag "bank-4.png" %>
       </div>
     </div>
@@ -180,10 +184,10 @@ title: Welcome to Middleman
 
 <section class="alliance section text-center">
   <div class="container">
-    <h4 class="section__subtitle">Empresa Confiable</h4>
-    <h3 class="section__title">Asociados Crediticios</h3>
+    <h4 class="section__subtitle wow fadeIn animated">Empresa Confiable</h4>
+    <h3 class="section__title wow fadeIn animated" data-wow-delay="0.2s">Asociados Crediticios</h3>
     <br>
-    <%= image_tag "alliance.png" %>
+    <%= image_tag "alliance.png", class: "fadeIn animated wow" %>
   </div>
 </section>
 
@@ -267,7 +271,7 @@ title: Welcome to Middleman
 
         <article class="faqs__item">
           <h4 class="faqs__item-title">¿Apurata es seguro?</h4>
-          <div class="faqs__item-text">
+          <div class="faqs__item-te>xt">
             <p>Sí, 100% seguro. Usamos información encriptada con un nivel de seguridad muy alto.</p>
           </div>
         </article>

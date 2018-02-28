@@ -5,6 +5,7 @@
 
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "The Middleman" %></title>
@@ -16,10 +17,11 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   </head>
 
   <body class="<%= page_classes %>">
-    <header class="main-header">
+    <header class="main-header animated fadeInDown">
       <div class="container main-header__container">
         <div class="main-header__brand">
           <%= image_tag "logo-white.svg", class: "main-header__brand-white" %>
@@ -29,6 +31,10 @@
         <nav class="main-header__nav">
           <a href="#">Contacto</a>
           <a class="main-header__login" href="#">Iniciar Sesión <i class="fas fa-arrow-right"></i></a>
+          <div class="tooltip">
+            <span>Para obtener tu tasa preferencial inicia sesión</span>
+            <a href="javascript:;" class="close"><i class="fas fa-times"></i></a>
+          </div>
         </nav>
       </div>
     </header>
@@ -75,6 +81,10 @@
         <p class="main-footer__disclaimer">TCEM:  25%, excluye IGV Interés, Costo total incluyendo IGV, comisiones e interes de S/ 70.35</p>
       </div>
     </footer>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <%= javascript_include_tag  "scroll" %>
+    <script type="text/javascript">
+      new WOW().init();
+    </script>
   </body>
 </html>
