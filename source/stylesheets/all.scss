@@ -118,6 +118,14 @@ img {
     color: #fff;
   }
 
+  &__action {
+    color: #fff;
+    background: $color-orange;
+    padding: 0.8em;
+    border-radius: 0.2em;
+    display: none;
+  }
+
   &__login {
     background: #fff;
     color: $color-action;
@@ -694,7 +702,28 @@ img {
 }
 
 @media screen and (max-width: 600px) {
-  .main-header__brand-tagline {
+  .main-header__brand-tagline,
+  .main-header__contact {
     display: none;
+  }
+
+  .main-header.is-scrolling .main-header__nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .main-header.is-scrolling .main-header__nav a {
+    font-size: 11px;
+  }
+
+  .main-header.is-scrolling .main-header__nav a.main-header__action {
+    display: inline-block;
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .main-header.is-scrolling .main-header__brand {
+    width: 60px;
   }
 }
