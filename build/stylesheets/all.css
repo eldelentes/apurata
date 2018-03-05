@@ -1,0 +1,688 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 7, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 28, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 32, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/_reset.scss */
+body {
+  line-height: 1; }
+
+/* line 35, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/_reset.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 38, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/_reset.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 41, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 46, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 4, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+* {
+  box-sizing: border-box; }
+
+/* line 14, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  color: #445367; }
+
+/* line 20, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.container {
+  width: 90%;
+  margin: 0 auto; }
+
+/* line 25, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+a {
+  text-decoration: none;
+  display: inline-block; }
+
+/* line 30, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+img {
+  max-width: 100%; }
+
+/* line 34, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.text-center {
+  text-align: center;
+  font-weight: 500; }
+
+/* line 40, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.button {
+  transition: all 0.2s ease; }
+  /* line 43, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .button.super {
+    background: #FF591B;
+    color: #fff;
+    padding: 1.5em;
+    font-size: 1.1em;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    text-align: center; }
+    /* line 53, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+    .button.super:hover {
+      background: #ff6c35;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+  /* line 59, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .button.ghost {
+    padding: 1em 2em;
+    color: #24b47e;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px; }
+    /* line 65, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+    .button.ghost:hover {
+      background: rgba(36, 180, 126, 0.05); }
+  /* line 70, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .button.contact {
+    background: #fff;
+    padding: 0.8em 1em;
+    border-radius: 4px; }
+  /* line 76, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .button.messenger {
+    color: #008FFF; }
+  /* line 77, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .button.whatsapp {
+    color: #00B779; }
+
+/* line 80, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.main-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 2rem 0;
+  z-index: 2;
+  transition: all 0.2s ease; }
+  /* line 88, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .main-header.is-scrolling, .main-header.is-responsive {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0; }
+  /* line 95, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .main-header__brand {
+    display: flex;
+    align-items: center; }
+  /* line 100, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .main-header__brand-dark {
+    display: none; }
+  /* line 104, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .main-header__brand-tagline {
+    font-weight: 600;
+    font-style: italic;
+    padding-left: 0.5em;
+    color: #fff; }
+  /* line 111, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .main-header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  /* line 117, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .main-header__nav a:not(.main-header__login) {
+    color: #fff; }
+  /* line 121, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .main-header__action {
+    color: #fff;
+    background: #FF591B;
+    padding: 0.8em;
+    border-radius: 0.2em;
+    display: none; }
+  /* line 129, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .main-header__login {
+    background: #fff;
+    color: #24b47e;
+    padding: 0.8em;
+    border-radius: 0.2em;
+    margin-left: 1em; }
+    /* line 136, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+    .main-header__login svg {
+      margin-left: 0.5rem; }
+
+/* line 144, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.main-header.is-scrolling .main-header__brand-dark,
+.main-header.is-responsive .main-header__brand-dark {
+  display: inline-block; }
+/* line 148, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.main-header.is-scrolling .main-header__brand-white,
+.main-header.is-responsive .main-header__brand-white {
+  display: none; }
+/* line 152, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.main-header.is-scrolling .main-header__brand-tagline,
+.main-header.is-scrolling .main-header__nav a:not(.main-header__login),
+.main-header.is-responsive .main-header__brand-tagline,
+.main-header.is-responsive .main-header__nav a:not(.main-header__login) {
+  color: #445367; }
+/* line 157, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.main-header.is-scrolling .main-header__login,
+.main-header.is-responsive .main-header__login {
+  background: #24b47e;
+  color: #fff; }
+
+/* line 163, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.intro {
+  height: 90vh;
+  background: url("../images/intro.jpg") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; }
+  /* line 172, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .intro__title {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 3.5em;
+    text-align: center;
+    line-height: 1.2em; }
+    /* line 178, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+    .intro__title strong {
+      color: #fff;
+      font-weight: 800;
+      font-style: italic;
+      position: relative; }
+      /* line 184, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+      .intro__title strong:before {
+        content: url(../images/stripe.svg);
+        position: absolute;
+        width: 100%;
+        bottom: -4px; }
+  /* line 193, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .intro__trust {
+    position: absolute;
+    bottom: 1em;
+    width: 200px; }
+
+/* line 200, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.quote-box {
+  width: 80%;
+  margin: 2rem auto;
+  position: relative; }
+  /* line 205, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .quote-box__main {
+    background: #fff;
+    padding: 1em;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1; }
+  /* line 214, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .quote-box__label {
+    font-weight: 600;
+    margin-bottom: 0.5em; }
+  /* line 219, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .quote-box__select {
+    background: url(../images/arrow.svg) no-repeat #fff;
+    background-position: 90% center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #d6d6d6;
+    border-radius: 2px;
+    font-size: 1.4em;
+    padding: 0.5em 1em;
+    width: 100%;
+    color: #24b47e; }
+  /* line 233, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .quote-box__payments {
+    background: #F7F7F7;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 0 0 4px 4px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); }
+  /* line 242, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .quote-box__payment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  /* line 248, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .quote-box__payment + .quote-box__payment {
+    margin-top: 0.5em; }
+  /* line 252, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .quote-box__payment-title {
+    color: #24b47e;
+    display: inline-block;
+    padding-right: 1em; }
+  /* line 258, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .quote-box__payment-data {
+    font-weight: 600; }
+
+/* line 263, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.section {
+  padding: 4em 0; }
+  /* line 266, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .section__subtitle {
+    color: #24b47e;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    text-align: center;
+    padding-bottom: 0.4em; }
+  /* line 276, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .section__title {
+    font-size: 2em;
+    padding: 10px 0;
+    text-align: center; }
+
+/* line 284, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.steps__container {
+  padding: 2em 0; }
+/* line 288, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.steps__item {
+  text-align: center; }
+/* line 292, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.steps__item-title {
+  color: #24b47e;
+  padding: 1em 0;
+  font-weight: 600; }
+/* line 298, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.steps__item-info {
+  line-height: 1.5em; }
+
+/* line 303, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.helper-text {
+  opacity: 0.5;
+  display: block;
+  padding-bottom: 0.2em; }
+
+/* line 309, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.why {
+  background: #FAFDFD;
+  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  /* line 312, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .why__list {
+    padding: 2em 0; }
+  /* line 316, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .why__item {
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 1em; }
+    /* line 321, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+    .why__item svg {
+      margin-right: 0.5rem;
+      display: block;
+      float: left; }
+    /* line 327, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+    .why__item svg path {
+      fill: #24b47e; }
+
+/* line 333, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.actions {
+  display: flex; }
+  /* line 335, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .actions__link {
+    width: calc(33.333333% - 3px);
+    text-align: center;
+    padding: 2em 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #445367;
+    font-weight: 600;
+    text-decoration: underline; }
+    /* line 345, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+    .actions__link:hover {
+      background: rgba(36, 180, 126, 0.05); }
+    /* line 349, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+    .actions__link span {
+      color: #24b47e;
+      padding-left: 1em; }
+    /* line 354, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+    .actions__link:nth-child(2) {
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+      border-left: 1px solid rgba(0, 0, 0, 0.1); }
+
+/* line 361, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.testimonials {
+  background: url(../images/test-bg.jpg) no-repeat center center;
+  background-size: cover; }
+  /* line 365, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .testimonials .section__subtitle {
+    color: rgba(255, 255, 255, 0.8); }
+  /* line 369, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .testimonials .section__title {
+    color: #fff; }
+
+/* line 374, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.contact-bar {
+  background: #24b47e;
+  padding: 1em 0;
+  text-align: center;
+  color: #fff; }
+  /* line 380, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .contact-bar p {
+    display: inline-block;
+    color: #fff;
+    padding-right: 1em; }
+
+/* line 389, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.how__items {
+  padding: 2em 0; }
+/* line 393, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.how__item {
+  padding: 1em; }
+/* line 397, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.how__item-subtitle {
+  display: block;
+  font-weight: 600;
+  padding: 1em 0; }
+/* line 403, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.how__item-title {
+  color: #24b47e;
+  font-weight: 600;
+  font-size: 1.3em;
+  padding-bottom: 1em; }
+/* line 410, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.how__item-text {
+  line-height: 1.6em;
+  width: 90%; }
+
+/* line 416, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.banks {
+  text-align: center; }
+  /* line 419, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .banks__title {
+    font-size: 1.8em;
+    font-weight: 600; }
+    /* line 423, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+    .banks__title strong {
+      color: #24b47e;
+      font-style: italic; }
+  /* line 429, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .banks__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0; }
+  /* line 436, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .banks__item {
+    background: #fff;
+    padding: 1em 2em;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1em; }
+
+/* line 449, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.main-footer {
+  padding: 4em 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  /* line 453, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .main-footer__copyright {
+    display: block;
+    padding: 1rem 0; }
+  /* line 458, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .main-footer__title {
+    font-weight: 800;
+    padding-bottom: 1rem; }
+  /* line 464, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .main-footer__nav a {
+    color: #445367;
+    display: block;
+    padding: 0.3rem 0; }
+  /* line 471, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .main-footer__phone {
+    color: #445367;
+    font-size: 1.2em; }
+    /* line 475, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+    .main-footer__phone svg path {
+      fill: #24b47e; }
+  /* line 480, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .main-footer__social {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem; }
+    /* line 485, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+    .main-footer__social-item {
+      color: #fff;
+      background: #24b47e;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      /* line 495, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+      .main-footer__social-item + .main-footer__social-item {
+        margin-left: 1rem; }
+  /* line 501, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .main-footer__disclaimer {
+    font-size: 0.8rem;
+    padding-top: 2em; }
+
+/* line 507, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.faqs {
+  background-image: linear-gradient(#fff 0%, #eefcff 100%); }
+  /* line 510, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .faqs__container {
+    padding: 2rem 0; }
+  /* line 514, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .faqs__item + .faqs__item {
+    margin-top: 2rem; }
+  /* line 518, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .faqs__item-title {
+    color: #24b47e;
+    font-weight: 600;
+    padding-bottom: 1em; }
+  /* line 524, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .faqs__item-text {
+    line-height: 1.5em; }
+    /* line 527, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+    .faqs__item-text p + p {
+      margin-top: 1rem; }
+    /* line 531, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+    .faqs__item-text strong {
+      font-weight: 800; }
+    /* line 535, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+    .faqs__item-text ul {
+      list-style: disc;
+      padding-left: 1em; }
+      /* line 539, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+      .faqs__item-text ul li {
+        padding-top: 1em; }
+
+/* line 546, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.ui-corner-all.ui-corner-all {
+  height: 20px;
+  border-radius: 100em;
+  background: #F4F6F2;
+  border: 0; }
+
+/* line 553, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+#custom-handle {
+  width: 6em;
+  height: 2.4em;
+  top: 50%;
+  text-align: center;
+  line-height: 36px;
+  background: #fff;
+  border-radius: 100em;
+  font-weight: 40;
+  outline: 0;
+  color: #24b47e;
+  transform: translate(-50%, -50%);
+  border: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+  /* line 568, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  #custom-handle:hover {
+    cursor: pointer; }
+  /* line 572, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  #custom-handle:before {
+    content: 'S/ '; }
+
+/* line 577, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.ui-widget-header.ui-widget-header {
+  background: #00E69C; }
+
+/* line 581, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+.tooltip {
+  background: #24b47e;
+  padding: 1rem;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(130%);
+  right: 5%;
+  color: #fff;
+  display: none; }
+  /* line 592, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .tooltip.is-active {
+    display: inline-block; }
+  /* line 596, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .tooltip:before {
+    content: '';
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #24b47e;
+    border-top: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    transform: translateY(-99%);
+    right: 5%; }
+  /* line 608, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .tooltip .close {
+    margin-left: 0.5rem; }
+    /* line 610, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+    .tooltip .close svg {
+      color: #fff; }
+
+@media screen and (max-width: 900px) {
+  /* line 619, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .main-header {
+    padding: 1rem 0; }
+
+  /* line 623, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .intro__title {
+    font-size: 26px; }
+
+  /* line 627, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .intro__title strong:before {
+    display: none; }
+
+  /* line 631, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .intro {
+    height: auto;
+    flex-direction: column;
+    padding: 90px 0; }
+
+  /* line 637, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .intro__trust {
+    position: relative; }
+
+  /* line 641, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .quote-box {
+    width: 90%; }
+
+  /* line 645, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .actions,
+  .banks__container {
+    flex-direction: column; }
+
+  /* line 650, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .actions__link {
+    width: 100%; }
+
+  /* line 654, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .contact-bar {
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    width: 100%; }
+
+  /* line 661, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .contact-bar p {
+    display: none; }
+
+  /* line 665, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .how__items {
+    text-align: center; }
+
+  /* line 669, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .banks__item {
+    margin: 1em 0;
+    width: 100%; }
+
+  /* line 674, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .quote-box__main {
+    flex-direction: column; }
+    /* line 677, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+    .quote-box__main > div {
+      margin-bottom: 1em; }
+
+  /* line 683, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .button.super {
+    padding: 1em 0; }
+
+  /* line 687, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .quote-box__payments {
+    width: 100%; }
+
+  /* line 691, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .quote-box__payment-data {
+    display: block; }
+
+  /* line 695, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .quote-box__payment {
+    margin: 10px 0; }
+
+  /* line 699, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .quote-box__payment div + div {
+    margin-left: 10px; } }
+@media screen and (max-width: 600px) {
+  /* line 705, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .main-header__brand-tagline,
+  .main-header__contact {
+    display: none; }
+
+  /* line 710, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .main-header.is-scrolling .main-header__nav {
+    display: flex;
+    align-items: center; }
+
+  /* line 715, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .main-header.is-scrolling .main-header__nav a {
+    font-size: 11px; }
+
+  /* line 719, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .main-header.is-scrolling .main-header__nav a.main-header__action {
+    display: inline-block;
+    color: #fff; } }
+@media screen and (max-width: 330px) {
+  /* line 726, /Users/eldelentes/Documents/Clientes/Apurata/web/source/stylesheets/all.scss */
+  .main-header.is-scrolling .main-header__brand {
+    width: 60px; } }
